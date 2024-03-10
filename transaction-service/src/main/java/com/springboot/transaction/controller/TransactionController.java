@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TransactionController {
     private final TransactionService transactionService;
-    @PostMapping("/buy")
+    @PostMapping
     public ResponseEntity<TransactionResponseDTO> createTransaction(@RequestBody TransactionRequestDTO transactionRequestDTO) {
         TransactionResponseDTO responseDTO = transactionService.createTransaction(transactionRequestDTO);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
