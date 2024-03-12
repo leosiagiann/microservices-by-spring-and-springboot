@@ -34,6 +34,6 @@ public class ProductFeignInvoker {
             log.error("ProductServiceFeignClient::findProductById feign error, details");
             throw e;
         }
-        return new ProductResponseDTO();
+        return null;
     }
 }

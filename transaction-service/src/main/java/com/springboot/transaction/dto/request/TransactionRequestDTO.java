@@ -1,5 +1,6 @@
 package com.springboot.transaction.dto.request;
 
+import com.springboot.transaction.validator.constraint.ProductMustExists;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ public class TransactionRequestDTO {
     @NotNull
     private Long userId;
 
+    @ProductMustExists
     @NotNull
     private Long productId;
 

@@ -6,6 +6,7 @@ import com.springboot.transaction.dto.response.TransactionResponseDTO;
 import com.springboot.transaction.entity.Transaction;
 import com.springboot.transaction.invoker.ProductFeignInvoker;
 import com.springboot.transaction.repository.TransactionRepository;
+import com.springboot.transaction.service.validation.ProductServiceValidation;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.math.NumberUtils;
 import org.modelmapper.ModelMapper;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class TransactionService {
     private final TransactionRepository transactionRepository;
-    private final ProductFeignInvoker productFeignInvoker;
+    private final ProductServiceValidation productServiceValidation;
     private final ModelMapper modelMapper;
     private final TransactionTemplate transactionTemplate;
 
@@ -39,7 +40,7 @@ public class TransactionService {
             transaction.setQuantity(transactionRequestDTO.getQuantity());
             transaction.setPaymentMethod(transactionRequestDTO.getPaymentMethod());
             transaction.setShippingAddress(transactionRequestDTO.getShippingAddress());
-            ProductResponseDTO productResponseDTO = productFeignInvoker.findProductById(transaction.getProductId());
+            ProductResponseDTO productResponseDTO = productServiceValidation.findByProductId(transaction.getProductId());
             transaction.setTotalPrice(NumberUtils.DOUBLE_ZERO);
             if (Objects.nonNull(productResponseDTO.getPrice())) {
                 transaction.setTotalPrice(productResponseDTO.getPrice() * transaction.getQuantity());
