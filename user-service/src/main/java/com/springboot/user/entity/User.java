@@ -3,6 +3,7 @@ package com.springboot.user.entity;
 import com.springboot.user.converter.EncryptionConverter;
 import com.springboot.user.converter.HashingConverter;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,8 +14,7 @@ import lombok.Setter;
  */
 @Entity
 @Table(name = "users")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class User {
     @Id
