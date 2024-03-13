@@ -4,8 +4,6 @@ import com.springboot.transaction.validator.constraint.ProductMustExists;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 /**
  * @Author: Leonardo Siagian
  * Created on 08/03/2024

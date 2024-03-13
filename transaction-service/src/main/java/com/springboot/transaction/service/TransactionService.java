@@ -4,7 +4,6 @@ import com.springboot.product.feign.dto.response.ProductResponseDTO;
 import com.springboot.transaction.dto.request.TransactionRequestDTO;
 import com.springboot.transaction.dto.response.TransactionResponseDTO;
 import com.springboot.transaction.entity.Transaction;
-import com.springboot.transaction.invoker.ProductFeignInvoker;
 import com.springboot.transaction.repository.TransactionRepository;
 import com.springboot.transaction.service.validation.ProductServiceValidation;
 import lombok.RequiredArgsConstructor;

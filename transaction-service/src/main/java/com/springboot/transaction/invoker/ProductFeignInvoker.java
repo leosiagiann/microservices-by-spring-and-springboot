@@ -2,7 +2,6 @@ package com.springboot.transaction.invoker;
 
 import com.springboot.product.feign.ProductServiceFeignClient;
 import com.springboot.product.feign.dto.response.ProductResponseDTO;
-import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

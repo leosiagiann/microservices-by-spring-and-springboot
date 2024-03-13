@@ -1,6 +1,5 @@
 package com.springboot.transaction.service.validation;
 
-import com.springboot.product.feign.dto.response.Product;
 import com.springboot.product.feign.dto.response.ProductResponseDTO;
 import com.springboot.transaction.constant.ErrorConstant;
 import com.springboot.transaction.exception.CustomException;

@@ -8,8 +8,6 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Objects;
-
 /**
  * @Author: Leonardo Siagian
  * Created on 12/03/2024
