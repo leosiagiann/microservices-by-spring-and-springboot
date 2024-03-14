@@ -1,5 +1,6 @@
 package com.springboot.user.dto.request;
 
+import com.springboot.user.validator.constraint.UsernameMustExists;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -12,6 +13,7 @@ public class UserRequestDTO {
     @NotNull
     private String name;
 
+    @UsernameMustExists
     @NotNull
     private String username;
 
