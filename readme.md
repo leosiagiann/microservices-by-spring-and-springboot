@@ -21,7 +21,8 @@
 2. Run Gateway Server Module
    - Note: before run config server make sure the configserver refer to your github repository
    - You can check this out https://github.com/leosiagiann/configuration-microservice
-3. Run Config Server Module 
+3. Run Config Server Module
+4. Create database and configure to your service configuration
 4. Run Product Service
 5. Run User Service
 6. Run Transaction Service
