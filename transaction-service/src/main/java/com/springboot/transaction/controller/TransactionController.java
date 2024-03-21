@@ -3,6 +3,7 @@ package com.springboot.transaction.controller;
 import com.springboot.transaction.dto.request.TransactionRequestDTO;
 import com.springboot.transaction.dto.response.TransactionResponseDTO;
 import com.springboot.transaction.service.TransactionService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +28,10 @@ public class TransactionController {
     }
 
     @GetMapping("/user/{id}")
+    @Operation(
+            summary = "Retrieve User Transactions",
+            description = "retrieve a list of transactions based on user ID"
+    )
     public ResponseEntity<List<TransactionResponseDTO>> getTransactionUsers(@PathVariable("id") Long userId) {
         List<TransactionResponseDTO> responseDTO = transactionService.getTransactionUsers(userId);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
