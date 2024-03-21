@@ -6,7 +6,7 @@ create table microservices.products
     stock       int          not null,
     price       double       not null,
     description varchar(256) null,
-    constraint cameras_merk_uindex
+    constraint cameras_name_uindex
         unique (name)
 );
 
