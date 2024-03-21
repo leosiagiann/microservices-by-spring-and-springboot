@@ -22,6 +22,10 @@ import java.util.List;
 public class TransactionController {
     private final TransactionService transactionService;
     @PostMapping
+    @Operation(
+            summary = "Save Transaction",
+            description = "Save Transaction"
+    )
     public ResponseEntity<TransactionResponseDTO> createTransaction(@RequestBody @Validated TransactionRequestDTO transactionRequestDTO) {
         TransactionResponseDTO responseDTO = transactionService.createTransaction(transactionRequestDTO);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
