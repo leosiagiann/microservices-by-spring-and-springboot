@@ -17,6 +17,7 @@
 ## How to run
     >> NOTE : Make sure the server port is available (Tips: Check on Command Prompt "netstat -aon")
     >> NB : Development on this project is still ongoing.
+    >> Documentation API : Swagger
 1. Run Discovery Server Module
 2. Run Gateway Server Module
    - Note: before run config server make sure the configserver refer to your github repository
